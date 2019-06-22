@@ -1,4 +1,4 @@
-# collectorJS-android
+# CollectorJS
 Android App for CollectorJS
 
 ## Idea:
