@@ -1,0 +1,69 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/white_grey_border_bottom">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/profileTollBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="@color/primaryText">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.like.LikeButton
+                    android:id="@+id/btn_cancel_profile_edit"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="top"
+                    android:layout_alignParentStart="true"
+                    app:anim_scale_factor="1.5"
+                    app:circle_end_color="@color/cancel"
+                    app:circle_start_color="@color/cancel"
+                    app:dots_primary_color="@color/colorAccent"
+                    app:dots_secondary_color="@color/colorPrimary"
+                    app:icon_size="35dp"
+                    app:is_enabled="true"
+                    app:like_drawable="@drawable/ic_close_black"
+                    app:liked="false"
+                    app:unlike_drawable="@drawable/ic_close_red" />
+                <TextView
+                    android:id="@+id/profileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="35dp"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:text="Edit profile"
+                    android:textColor="@color/primaryText"
+                    />
+                <com.like.LikeButton
+                    android:id="@+id/btn_save_profile_edit"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="top"
+                    android:layout_alignParentEnd="true"
+                    app:anim_scale_factor="1.5"
+                    app:circle_end_color="#fff"
+                    app:circle_start_color="@color/colorhintAccent"
+                    app:dots_primary_color="@color/colorAccent"
+                    app:dots_secondary_color="@color/colorhintAccent"
+                    app:icon_size="35dp"
+                    app:is_enabled="true"
+                    app:like_drawable="@drawable/ic_check_primary"
+                    app:liked="false"
+                    app:unlike_drawable="@drawable/ic_check_black" />
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+</merge>

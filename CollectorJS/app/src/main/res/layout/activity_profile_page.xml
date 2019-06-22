@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:background="@color/colorPrimaryDark"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/topProfileToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <include
+                android:id="@+id/topProfileBar"
+                layout="@layout/snippet_top_profile_bar"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/editProfileBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topProfileToolBar"
+            android:layout_marginBottom="20dp">
+
+            <ScrollView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <LinearLayout
+                    android:id="@+id/ll_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_person_grey"
+                        app:civ_border_color="#88FFFFFF"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:id="@+id/btn_change_profile_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="Change Image"
+                        android:textColor="#1976D2"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Display Name"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+
+                    <EditText
+                        android:id="@+id/profile_edit_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="Enter your display name"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:text=""
+                        android:textColorHint="@color/colorhintAccent"
+                        android:textColor="@color/primaryText"
+
+                        android:textSize="18sp"
+                        android:maxLines="1"/>
+
+                    <!--<Button-->
+                        <!--android:id="@+id/profile_saveBtn"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="16dp"-->
+                        <!--android:width="250dp"-->
+                        <!--android:background="@drawable/buttonwithstates"-->
+                        <!--android:text="Update Profile"-->
+                        <!--android:layout_gravity="center"/>-->
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+        </RelativeLayout>
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:itemIconTint="@drawable/bottom_navigation_colors"
+            app:itemTextColor="@drawable/bottom_navigation_colors"
+            android:layout_below="@id/editProfileBody"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </RelativeLayout>
+</layout>
