@@ -1,8 +1,7 @@
 # CollectorJS
 Android App for CollectorJS
 
-## Idea:
-For CS602 (server-side web development), I had developed an express-js based website(http://collectorjs.herokuapp.com) to store the links for the articles that students were sharing on our discussion board. For current semester project, the idea is to extend this website and create a mobile app for the same. 
+
 ## Scope:
 This app will be somewhere between Twitter (allowing limited character length of post) & reddit (allowing discussion of the given links and moderating links). The target audience is any tech enthusiasts who enjoy to share and discuss technology related articles.
 
